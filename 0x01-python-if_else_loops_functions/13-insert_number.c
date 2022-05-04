@@ -32,6 +32,7 @@ listint_t *insert_node(listint_t **head, int number)
 			p_aux = p_aux->next;
 			new_node->next = *head;
 			*head = new_node;
+			return (p_aux);
 		}
 		p_aux = p_aux->next;
 	}
