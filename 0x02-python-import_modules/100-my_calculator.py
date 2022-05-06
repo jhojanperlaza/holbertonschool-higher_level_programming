@@ -22,4 +22,4 @@ if __name__ == '__main__':
         result = mul(a, b)
     if sys.argv[2] == '/':
         result = div(a, b)
-    print(result)
+    print(f"{a} {s} {b} = {result}")
