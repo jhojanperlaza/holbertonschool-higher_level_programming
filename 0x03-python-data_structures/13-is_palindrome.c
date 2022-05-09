@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * is_palindrome- checks if a singly linked list is a palindrome.
  * @head: pointer to head of list
