@@ -13,7 +13,9 @@ int palindrome(listint_t **string_left, listint_t **head)
 	listint_t *move = NULL;
 	listint_t *string_right = NULL;
 
-	if (!head || !*head)
+	if (!head)
+		return (1);
+	if (!*head)
 		return (0);
 
 	string_right = *head;
