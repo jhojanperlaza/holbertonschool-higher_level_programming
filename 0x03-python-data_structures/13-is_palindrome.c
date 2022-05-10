@@ -14,9 +14,9 @@ int palindrome(listint_t **string_left, listint_t **head)
 	listint_t *string_right = NULL;
 
 	if (!head)
-		return (1);
-	if (!*head)
 		return (0);
+	if (!*head)
+		return (1);
 
 	string_right = *head;
 
