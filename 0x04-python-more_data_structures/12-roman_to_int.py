@@ -1,14 +1,19 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    dic_roman = {'X':10,'I':1,'V':5, 'L':50,'C':100,'D':500,'M':1000}
+    dic_roman = {'X': 10, 'I': 1, 'V': 5,
+                 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+
     def comparator(letter):
         result, i = 0, 0
-        for char in roman_string:
-            if char == letter:
+        for key in dic_roman:
+            if key == letter:
                 result = result + dic_roman[letter]
+            if letter == 'I' and i < len(roman_string)-1:
+                index = roman_string.index('I')
+                if roman_string[index+1] != 'I':
+                    return -1
             i = i+1
         return result
-
-    comp = list(map(comparator, dic_roman))
+    comp = list(map(comparator, roman_string))
     return sum(comp)
