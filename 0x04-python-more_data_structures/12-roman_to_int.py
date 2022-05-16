@@ -9,11 +9,14 @@ def roman_to_int(roman_string):
         for key in dic_roman:
             if key == letter:
                 result = result + dic_roman[letter]
-            if letter == 'I' and i < len(roman_string)-1:
+                return result
+
+            if letter == 'I':
                 index = roman_string.index('I')
-                if roman_string[index+1] != 'I':
-                    return -1
-            i = i+1
+                if index < len(roman_string)-1:
+                    if roman_string[index+1] != 'I':
+                        return -1
         return result
+
     comp = list(map(comparator, roman_string))
     return sum(comp)
