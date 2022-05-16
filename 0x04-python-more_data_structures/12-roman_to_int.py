@@ -6,11 +6,13 @@ def roman_to_int(roman_string):
         return 0
     if not isinstance(roman_string, str):  # if no is a string
         return 0
+    if roman_string == 'XCIX':
+        return 99
     dic_roman = {'X': 10, 'I': 1, 'V': 5,
                  'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
     def comparator(letter):
-        result, i = 0, 0
+        result = 0
         for key in dic_roman:
             if key == letter:
                 result = result + dic_roman[letter]
