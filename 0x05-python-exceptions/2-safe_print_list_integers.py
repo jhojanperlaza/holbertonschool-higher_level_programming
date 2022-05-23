@@ -5,9 +5,9 @@ def safe_print_list_integers(my_list=[], x=0):
     for element in my_list[:x]:
         try:
             int(element)
-            print("{:d}".format(element),end="")
+            print("{:d}".format(element), end="")
             cont += 1
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, IndexError):
             continue
     print()
     return cont
