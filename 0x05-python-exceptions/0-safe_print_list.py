@@ -5,6 +5,6 @@ def safe_print_list(my_list=[], x=0):
         try:
             print(int(element), end="")
         except ValueError:
-            print(element)
+            print(element, end="")
     print()
     return element
