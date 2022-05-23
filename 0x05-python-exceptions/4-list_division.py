@@ -3,7 +3,7 @@
 def list_division(my_list_1, my_list_2, list_length):
     new_list = [0 for _ in range(list_length)]
     index = 0
-    for num1, num2 in zip(my_list_1[:list_length], my_list_2[:list_length]):
+    for num1, num2 in zip(my_list_1, my_list_2):
         try:
             _div = (num1 / num2)
         except(TypeError):
