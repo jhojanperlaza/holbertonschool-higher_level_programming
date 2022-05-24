@@ -4,4 +4,5 @@
 
 
 class Square:
+    """ this is my first class"""
     pass
