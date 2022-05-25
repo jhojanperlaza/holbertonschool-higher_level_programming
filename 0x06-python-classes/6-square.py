@@ -2,6 +2,8 @@
 """ defines a square class"""
 
 
+
+
 class Square():
     """thanks to init we can receive the arguments, in this case '3' """
 
@@ -11,14 +13,16 @@ class Square():
             raise NameError("size must be an integer")
         if (self.__size < 0):
             raise NameError("size must be >= 0")
-        if (len(position) != 2 or type(position[0]) != int or type(position[1]) != int):
+        if (type(position[0]) != int or type(position[1]) != int):
+            raise NameError("position must be a tuple of 2 positive integers")
+        if (position[0] < 0 or position[1] < 0):
             raise NameError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     @property
     def size(self):
         return (self.__size)
-
+    @property
     def position(self):
         return (self.__position)
 
@@ -29,9 +33,12 @@ class Square():
         if (value < 0):
             raise ValueError("size must be >= 0")
         self.__size = value
-
+    
+    @position.setter
     def position(self, value):
-        if (len(value) != 2 or type(value[0]) != int or type(value[1]) != int):
+        if (type(value[0]) != int or type(value[1]) != int):
+            raise NameError("position must be a tuple of 2 positive integers")
+        if (value[0] < 0 or value[1] < 0):
             raise NameError("position must be a tuple of 2 positive integers")
         self.__position = value
 
