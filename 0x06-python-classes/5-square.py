@@ -12,11 +12,13 @@ class Square():
         if (self.__size < 0):
             raise NameError("size must be >= 0")
 
-    @property #decorador -> getter
+    # decorador -> getter
+    @property
     def size(self):
         return (self.__size)
+    # decorador -> setter
 
-    @size.setter #decorador -> setter
+    @size.setter
     def size(self, value):
         if (type(value) != int):
             raise TypeError("size must be an integer")

@@ -22,7 +22,7 @@ class Square():
 
         self.__position = position
 
-    @property #decorador -> getter
+    @property  # decorador -> getter
     def size(self):
         return (self.__size)
 
@@ -30,7 +30,7 @@ class Square():
     def position(self):
         return (self.__position)
 
-    @size.setter #decorador -> setter
+    @size.setter  # decorador -> setter
     def size(self, value):
         if (type(value) != int):
             raise TypeError("size must be an integer")
