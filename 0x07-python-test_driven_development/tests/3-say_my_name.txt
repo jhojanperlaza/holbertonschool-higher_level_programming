@@ -1,0 +1,36 @@
+==============================
+ doctest_in_3-say_my_name.txt
+==============================
+
+import of the module to be tested:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test_1: try my name:
+    >>> say_my_name("Jhojan", "Perlaza")
+    My name is Jhojan Perlaza
+
+Test_2: first name is not string :
+    >>> say_my_name(1024, "Arana")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test_3: last name is not string :
+    >>> say_my_name("Francisco", ["Almendra"])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Test_4: last name is empty:
+    >>> say_my_name("Francisco", " ")
+    My name is Francisco  
+
+Test_5: none name:
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test_6: only first name:
+    >>> say_my_name("Pablo")
+    My name is Pablo 
