@@ -1,0 +1,41 @@
+==============================
+ doctest_in_4-print_square.txt
+==============================
+
+import of the module to be tested:
+    >>> print_square = __import__('4-print_square').print_square
+
+Test_1: 4x4 square:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Test_2: size invalid:
+    >>> print_square("3")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Test_3: size less than 0:
+    >>> print_square(-8)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Test_4: size invalid:
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Test_5: size 0:
+    >>> print_square(0)
+
+
+Test_5: size is a float:
+    >>> print_square(9.33)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
