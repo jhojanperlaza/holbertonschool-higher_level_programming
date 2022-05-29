@@ -1,0 +1,69 @@
+#!/usr/bin/python3
+=============================
+ doctest_in_0-add_integer.py
+=============================
+
+import of the module to be tested:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test_1: adding a positive and negative number:
+    >>> add_integer(5.999999999999, -8)
+    -3
+
+Test_2: adding a float and negative number:
+    >>> add_integer(2.5, -3)
+    -1
+
+Test_3: adding a float and a integer number:
+    >>> add_integer(49.9, 5000)
+    5049
+
+Test_4: adding string and negative number:
+    >>> add_integer("jhojan", -29)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test_5: adding negative number and string:
+    >>> add_integer(-1025, "hi")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test_6: adding max iten in list and integer number:
+    >>> add_integer(max(1, 10, 89, 4506), 789)
+    5295
+
+Test_7: None and string:
+    >>> add_integer(None, "holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test_8: None and True:
+    >>> add_integer(89, True)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test_9: None and True:
+    >>> add_integer(29.99999, 2)
+    31
+
+Test_10: sum of the maximum and minimum value of a float varibale:
+    >>> add_integer(float('inf'), float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Test_11: empty list:
+    >>> add_integer([])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test_11: empty list:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
