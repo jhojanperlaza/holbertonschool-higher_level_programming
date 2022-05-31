@@ -6,6 +6,7 @@ built a class Rectangle empty
 
 """
 
+
 class Rectangle:
     """
     Args:
@@ -17,6 +18,7 @@ class Rectangle:
         TypeError: width must be an integer
         ValueError: "width must be >= 0"
     """
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -39,11 +41,8 @@ class Rectangle:
 
     @width.setter  # -> setter width
     def width(self, value):
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-
-
-
