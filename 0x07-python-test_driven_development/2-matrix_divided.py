@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
+
     this module divides all elements of a matrix
+
 """
 
 
