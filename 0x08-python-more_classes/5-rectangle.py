@@ -22,6 +22,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+
     def __del__(self):
         print("Bye rectangle...")
 
