@@ -154,9 +154,3 @@ Test_12: empty list:
     >>> add_integer(100, -2)
     98
 
-=============
-3. Only 1 arg
-=============
-
-    >>> add_integer(2)
-    100
