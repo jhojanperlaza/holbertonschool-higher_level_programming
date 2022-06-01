@@ -174,32 +174,3 @@ Test_12: empty list:
 
     >>> add_integer(1500.5)
     1598
-
-======
-6. NaN
-======
-
-    >>> add_integer(float('NaN'))
-    Traceback (most recent call last):
-    ...
-    ValueError: cannot convert float NaN to integer
-
-==============
-7. String in a
-==============
-
-    >>> add_integer("Cohort", 17)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-==============
-8. String in b
-==============
-
-    >>> add_integer(-100, "School")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-
