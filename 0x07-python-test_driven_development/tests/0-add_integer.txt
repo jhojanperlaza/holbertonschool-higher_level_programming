@@ -202,28 +202,4 @@ Test_12: empty list:
     ...
     TypeError: b must be an integer
 
-================
-9. Double string
-================
-
-    >>> add_integer("Francisco", "RamÃ­rez")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-========
-10. None
-========
-
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-==========
-11. Floats
-==========
-
-    >>> add_integer(100.5, 10.8)
-    110
 
