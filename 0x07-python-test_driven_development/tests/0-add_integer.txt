@@ -139,18 +139,9 @@ Test_12: empty list:
     ...
     TypeError: a must be an integer
 
+=============
+3. Only 1 arg
+=============
 
-===================
-1. Positive numbers
-===================
-
-    >>> add_integer(10, 18)
-    28
-
-================
-2. Negative ints
-================
-
-    >>> add_integer(100, -2)
-    98
-
+    >>> add_integer(2)
+    100
