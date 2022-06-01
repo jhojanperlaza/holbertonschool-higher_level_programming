@@ -251,28 +251,3 @@ Test_12: empty list:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
-
-=============
-15. None in b
-=============
-
-    >>> add_integer(-1000, None)
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-=========
-16. Chars
-=========
-
-    >>> add_integer('a', 52)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-    >>> add_integer(4999, '$')
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-
