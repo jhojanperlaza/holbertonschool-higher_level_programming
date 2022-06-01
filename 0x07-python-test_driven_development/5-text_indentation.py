@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
 
-    this module prints 
-    a text with 2 new lines after each of these 
+    this module prints
+    a text with 2 new lines after each of these
     characters: ., ? and :
 
 """
+
 
 def text_indentation(text):
     """
@@ -18,25 +19,25 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    text = text.strip( )
+    text = text.strip()
     is_new_line = True
     for chars in text:
         if chars == '.':
             print(chars)
-            print('\n', end = '')
+            print('\n', end='')
             is_new_line = True
             continue
         if chars == '?':
             print(chars)
-            print('\n', end = '')
+            print('\n', end='')
             is_new_line = True
             continue
         if chars == ':':
             print(chars)
-            print('\n', end = '')
+            print('\n', end='')
             is_new_line = True
             continue
-        if is_new_line == True:
+        if is_new_line:
             if chars == ' ':
                 continue
             is_new_line = False
