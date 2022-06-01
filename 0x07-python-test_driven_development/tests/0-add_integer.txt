@@ -97,3 +97,8 @@ Test_12: empty list:
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(-1000, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
