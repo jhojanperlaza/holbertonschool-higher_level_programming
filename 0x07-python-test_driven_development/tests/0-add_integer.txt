@@ -227,27 +227,3 @@ Test_12: empty list:
     >>> add_integer(100.5, 10.8)
     110
 
-===================
-12. Negative floats
-===================
-
-    >>> add_integer(-100.5, -10.8)
-    -110
-
-========
-13. Char
-========
-
-    >>> add_integer("F")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-=============
-14. None in a
-=============
-
-    >>> add_integer(None, 999)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
