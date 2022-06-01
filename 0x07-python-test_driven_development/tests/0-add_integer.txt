@@ -160,17 +160,3 @@ Test_12: empty list:
 
     >>> add_integer(2)
     100
-
-=========================
-4. Float and negative int
-=========================
-
-    >>> add_integer(100.3, -2)
-    98
-
-=============
-5. high float
-=============
-
-    >>> add_integer(1500.5)
-    1598
