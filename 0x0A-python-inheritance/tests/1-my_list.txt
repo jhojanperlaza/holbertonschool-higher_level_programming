@@ -76,13 +76,13 @@ Test_8: add negative number:
     >>> my_list.print_sorted()
     [-785, -78, -65, -48, -1]
 
-Test_8: add negative number:
+Test_9: add negative number:
     >>> my_list = MyList()
     >>> my_list.append("a")
     >>> print(my_list)
     ['a']
 
-Test_8: add negative number:
+Test_10: add negative number:
     >>> my_list = MyList()
     >>> my_list.append(-1)
     >>> my_list.append(78)
@@ -91,3 +91,8 @@ Test_8: add negative number:
     >>> my_list.append(-785)
     >>> my_list.print_sorted()
     [-785, -65, -1, 48, 78]
+
+Test_10: Printing an empty list
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
