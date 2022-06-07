@@ -1,0 +1,48 @@
+=============================
+ doctest_in_0-1-my_list.py
+=============================
+
+import of the module to be tested:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test_1: adding a positive and negative number:
+    >>> my_list = MyList(); my_list.append(10); my_list.append(2); my_list.append(105); print(my_list); my_list.print_sorted() 
+    [10]
+    [10, 2]
+    [10, 2, 105]
+    [10, 2, 105]
+    [2, 10, 105]
+
+Test_2: adding a string:
+    >>> my_list = MyList(); my_list.append("hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: Must be an integer
+
+Test_3: adding a number and string:
+    >>> my_list = MyList(); my_list.append(10); my_list.append(4); my_list.append("a"); my_list.append(15);
+    Traceback (most recent call last):
+    ...
+    TypeError: Must be an integer
+
+Test_4:  without arguments append:
+    >>> my_list = MyList(); my_list.append()
+    Traceback (most recent call last):
+    ...
+    TypeError: append() missing 1 required positional argument: 'num'
+
+Test_5: sorted empty list :
+    >>> my_list = MyList(); my_list.print_sorted()
+    []
+
+Test_4:  many arguments :
+    >>> my_list = MyList(); my_list.append(1 , 10)
+    Traceback (most recent call last):
+    ...
+    TypeError: append() takes 2 positional arguments but 3 were given
+
+Test_6: soted with arguments :
+    >>> my_list = MyList(); my_list.print_sorted([1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
