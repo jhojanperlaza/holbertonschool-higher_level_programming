@@ -59,3 +59,19 @@ Test_6:  without arguments sorted:
     Traceback (most recent call last):
     ...
     TypeError: 'int' object is not iterable
+
+Test_7: print only one element:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
+
+Test_8: add negative number:
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-78)
+    >>> my_list.append(-65)
+    >>> my_list.append(-48)
+    >>> my_list.append(-785)
+    >>> my_list.print_sorted()
+    [-785, -78, -65, -48, -1]
