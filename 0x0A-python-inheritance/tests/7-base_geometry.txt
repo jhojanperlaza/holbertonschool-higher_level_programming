@@ -48,4 +48,22 @@ Test_4: pass directory:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator(["jhojan", "perlaza"], 2)
 
+Test_5: Passing None to method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: <name> must be an integer
+
+Test_6: test area method
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> bg = BaseGeometry()
+    >>> bg.area(5, 5)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: area() takes 1 positional argument but 3 were given
 
