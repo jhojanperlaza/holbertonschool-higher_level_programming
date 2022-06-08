@@ -36,3 +36,16 @@ Test_2: pass more arguments:
     Traceback (most recent call last):
     ...
     TypeError: BaseGeometry() takes no arguments
+
+Test_3: pass inf number:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("perlaza", float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: <name> must be an integer
+
+Test_4: pass directory:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(["jhojan", "perlaza"], 2)
+
+
