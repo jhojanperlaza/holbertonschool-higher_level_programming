@@ -11,15 +11,15 @@ Test_1: base test:
     >>> bg.integer_validator("pilas", "John")
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: pilas must be an integer
     >>> bg.integer_validator("jhojan", 0)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: jhojan must be greater than 0
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: distance must be greater than 0
 
 Test_2: pass more arguments:
     >>> bg = BaseGeometry()
@@ -42,7 +42,7 @@ Test_3: pass inf number:
     >>> bg.integer_validator("perlaza", float('inf'))
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: perlaza must be an integer
 
 Test_4: pass directory:
     >>> bg = BaseGeometry()
@@ -54,14 +54,14 @@ Test_4: pass directory:
     >>> bg.integer_validator(["jhojan", "perlaza"], 2.89)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: ['jhojan', 'perlaza'] must be an integer
 
 Test_5: Passing None to method
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: age must be an integer
 
 Test_6: test area method
     >>> bg.area()
