@@ -1,5 +1,5 @@
 =============================
- doctest_in_0-1-my_list.py
+ doctest_in_07-base_geometry
 =============================
 
 import of the module to be tested:
@@ -48,6 +48,14 @@ Test_4: pass directory:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator(["jhojan", "perlaza"], 2)
 
+
+Test_4: pass directory:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(["jhojan", "perlaza"], 2.89)
+    Traceback (most recent call last):
+    ...
+    TypeError: <name> must be an integer
+
 Test_5: Passing None to method
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", None)
@@ -64,14 +72,14 @@ Test_6: test area method
     >>> bg = BaseGeometry()
     >>> bg.area(5, 5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: area() takes 1 positional argument but 3 were given
 
 Passing one argument to area method
     >>> bg = BaseGeometry()
     >>> bg.area(5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: area() takes 1 positional argument but 2 were given
 
     >>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.__doc__
@@ -89,3 +97,10 @@ Passing one argument to area method
     >>> sizeOfmod = __import__("7-base_geometry").__doc__
     >>> len(sizeOfmod) > 1
     True
+
+Test_4: pass directory:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator( , )
+    Traceback (most recent call last):
+    ...
+    SyntaxError: invalid syntax
