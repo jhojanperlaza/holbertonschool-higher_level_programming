@@ -35,4 +35,4 @@ Test_2: pass more arguments:
     >>> bg = BaseGeometry(123)
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    TypeError: BaseGeometry() takes no arguments
