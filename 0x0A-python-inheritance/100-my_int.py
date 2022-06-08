@@ -9,8 +9,10 @@ class MyInt(int):
     """
     MyInt class
     """
-    def __init__(self, num):
-        self.num = num
+    def __eq__(self, num_input):
+        """ Method that returns != check """
+        return int.__ne__(self, num_input)
 
-    def __str__(self):
-        return "{}".format(self.num)
+    def __ne__(self, num_input):
+        """ Method that returns == check """
+        return int.__eq__(self, num_input)
