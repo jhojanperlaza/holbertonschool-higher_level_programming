@@ -20,3 +20,15 @@ Test_1: base test:
     Traceback (most recent call last):
     ...
     ValueError: <name> must be greater than 0
+
+Test_2: pass more arguments:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
