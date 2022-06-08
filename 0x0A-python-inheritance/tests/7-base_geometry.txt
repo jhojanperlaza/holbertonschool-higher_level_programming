@@ -1,0 +1,22 @@
+=============================
+ doctest_in_0-1-my_list.py
+=============================
+
+import of the module to be tested:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test_1: base test:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("mimir", 12)
+    >>> bg.integer_validator("pilas", "John")
+    Traceback (most recent call last):
+    ...
+    TypeError: <name> must be an integer
+    >>> bg.integer_validator("jhojan", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: <name> must be greater than 0
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: <name> must be greater than 0
