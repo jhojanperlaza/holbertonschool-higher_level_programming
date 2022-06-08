@@ -5,7 +5,7 @@ class BaseGeometry with one method
 """
 
 
-class MyInt:
+class MyInt(int):
     """
     MyInt class
     """
