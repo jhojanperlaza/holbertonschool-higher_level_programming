@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+class BaseGeometry with one method
+
+"""
+
 
 class MyInt:
     def __init__(self, num):
