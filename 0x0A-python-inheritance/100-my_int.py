@@ -6,6 +6,9 @@ class BaseGeometry with one method
 
 
 class MyInt:
+    """
+    MyInt class
+    """
     def __init__(self, num):
         self.num = num
 
