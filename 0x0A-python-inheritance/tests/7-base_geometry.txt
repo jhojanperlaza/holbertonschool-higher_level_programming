@@ -89,18 +89,3 @@ Passing one argument to area method
     >>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.area.__doc__
     >>> len(sizeOfmod) > 1
     True
-
-    >>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
-    >>> len(sizeOfmod) > 1
-    True
-
-    >>> sizeOfmod = __import__("7-base_geometry").__doc__
-    >>> len(sizeOfmod) > 1
-    True
-
-Test_4: pass directory:
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator( , )
-    Traceback (most recent call last):
-    ...
-    SyntaxError: invalid syntax
