@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 
-json.dumps() function 
-converts a Python object 
+json.dumps() function
+converts a Python object
 into a Json string.
 
 """
