@@ -32,6 +32,7 @@ class Student:
         En esta caso self nos sirve como
         parametro de objeto para
         setattr
+        setattr-> setea los atributos
         """
         for key, value in json.items():
             setattr(self, key, value)
