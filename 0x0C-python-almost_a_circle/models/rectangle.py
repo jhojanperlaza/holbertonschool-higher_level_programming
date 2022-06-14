@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-""" This module contains the class Rectangle """
+"""
+This module contains the class Rectangle
+that inherits from Base class
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
+    """
+    This is a Recatangle class
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -60,9 +66,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ this method return the area of rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """ this method print the rectangle """
         for y_rows in range(self.__y):
             print()
         for columns in range(self.__height):
