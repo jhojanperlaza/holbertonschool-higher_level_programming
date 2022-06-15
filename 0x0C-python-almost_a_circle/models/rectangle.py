@@ -92,6 +92,17 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Updates the currents instances """
         cont = 0
+        for arg in args:
+            if cont == 0:
+                self.id = arg
+            if cont == 1:
+                self.__width = arg
+            if cont == 2:
+                self.__height = arg
+            if cont == 3:
+                self.__x = arg
+            if cont == 4:
+                self.__y = arg
 
     def __str__(self):
         """ Returns a string representation"""
