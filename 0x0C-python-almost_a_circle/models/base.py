@@ -2,6 +2,7 @@
 """ This module contains the class Base """
 import json
 
+
 class Base:
     """ This is class Base """
     __nb_objects = 0
@@ -16,6 +17,7 @@ class Base:
             self.id = self.__nb_objects
 
     def to_json_string(list_dictionaries):
-            if list_dictionaries is None or list_dictionaries == " ":
-                return "[]"
-            return json.dumps(list_dictionaries)
+        """ base json representation"""
+        if list_dictionaries is None or list_dictionaries == " ":
+            return "[]"
+        return json.dumps(list_dictionaries)
