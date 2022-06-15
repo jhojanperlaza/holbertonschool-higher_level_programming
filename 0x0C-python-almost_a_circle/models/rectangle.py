@@ -118,6 +118,14 @@ class Rectangle(Base):
                 if key == 'id':
                     self.id = value
 
+    def to_dictionary(self):
+        dictionary_of_class = {'x': self.__x,
+                               'y': self.__y,
+                               'id': self.id,
+                               'height': self.__height,
+                               'width': self.__width}
+        return dictionary_of_class
+
     def __str__(self):
         """ Returns a string representation"""
         string_str = "[Rectangle] "
