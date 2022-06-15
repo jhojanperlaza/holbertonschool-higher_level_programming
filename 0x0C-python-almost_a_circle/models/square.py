@@ -55,3 +55,12 @@ class Square(Rectangle):
                     self.y = value
                 if key == 'id':
                     self.id = value
+
+    def to_dictionary(self):
+        """ Method to calculate  the to_dictionary of the rectangle"""
+        dictionary_of_class = {'x': self.__x,
+                               'y': self.__y,
+                               'id': self.id,
+                               'height': self.__height,
+                               'width': self.__width}
+        return dictionary_of_class
