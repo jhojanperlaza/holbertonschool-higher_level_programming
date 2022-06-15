@@ -103,6 +103,7 @@ class Rectangle(Base):
                 self.__x = arg
             if cont == 4:
                 self.__y = arg
+            cont += 1
 
     def __str__(self):
         """ Returns a string representation"""
