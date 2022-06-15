@@ -10,6 +10,7 @@ class Rectangle(Base):
     """
     This is a Recatangle class
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ constructor that initialize instance attributes"""
         self.width = width
@@ -91,19 +92,31 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Updates the currents instances """
-        cont = 0
+        n_argument = 0
         for arg in args:
-            if cont == 0:
+            if n_argument == 0:
                 self.id = arg
-            if cont == 1:
+            if n_argument == 1:
                 self.__width = arg
-            if cont == 2:
+            if n_argument == 2:
                 self.__height = arg
-            if cont == 3:
+            if n_argument == 3:
                 self.__x = arg
-            if cont == 4:
+            if n_argument == 4:
                 self.__y = arg
-            cont += 1
+            n_argument += 1
+        if args is not None:
+            for key, value in kwargs.items():
+                if key == 'width':
+                    self.__width = value
+                if key == 'height':
+                    self.__height = value
+                if key == 'x':
+                    self.__x = value
+                if key == 'y':
+                    self.__y = value
+                if key == 'id':
+                    self.id = value
 
     def __str__(self):
         """ Returns a string representation"""
