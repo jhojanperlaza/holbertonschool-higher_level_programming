@@ -58,9 +58,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """ Method to calculate  the to_dictionary of the rectangle"""
-        dictionary_of_class = {'x': self.x,
-                               'y': self.y,
-                               'id': self.id,
-                               'height': self.height,
-                               'width': self.width}
+        dictionary_of_class = {'id': self.id,
+                               'x': self.x,
+                               'size': self.width,
+                               'y': self.y}
         return dictionary_of_class
