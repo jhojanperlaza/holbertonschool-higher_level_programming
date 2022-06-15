@@ -11,6 +11,7 @@ class Rectangle(Base):
     This is a Recatangle class
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ constructor that initialize instance attributes"""
         self.width = width
         self.height = height
         self.x = x
@@ -19,22 +20,27 @@ class Rectangle(Base):
 
     @property  # -> getter
     def width(self):
+        """ method getter of width"""
         return self.__width
 
     @property
     def height(self):
+        """ method getter of height"""
         return self.__height
 
     @property
     def x(self):
+        """ method getter of x"""
         return self.__x
 
     @property
     def y(self):
+        """ method getter of y"""
         return self.__y
 
     @width.setter
     def width(self, value):
+        """ method setter the width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -43,6 +49,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """ method setter height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -51,6 +58,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """ setter x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -59,6 +67,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """ Seted value of y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -81,9 +90,11 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        """ Updates the currents instances """
         cont = 0
 
     def __str__(self):
+        """ Returns a string representation"""
         string_str = "[Rectangle] "
         string_str += "({}) {}/{}".format(self.id, self.__x, self.__y)
         string_str += " - {}/{}".format(self.__width, self.__height)
