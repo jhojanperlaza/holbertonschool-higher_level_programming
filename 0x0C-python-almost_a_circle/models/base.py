@@ -12,8 +12,8 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            self.__class__.__nb_objects += 1
-            """ other form is 'Base.__nb_objects += 1' """
+            Base.__nb_objects += 1
+            """ other form is 'self.__class__.__nb_objects += 1' """
             self.id = self.__nb_objects
 
     @staticmethod
