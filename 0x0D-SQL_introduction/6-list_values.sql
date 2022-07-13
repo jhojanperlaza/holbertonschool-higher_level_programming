@@ -1,4 +1,3 @@
--- full description of the table
--- script that prints the full description of the table first_table.
--- If the table first_table already exists, script not fail
+-- List all in table
+-- script that lists all rows of the table first_table
 SELECT * FROM first_table
