@@ -2,6 +2,6 @@
 -- The states table contains only one record where name = California
 -- Results must be sorted in ascending order by cities.id
 SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_shows
-INNER JOIN tv_show_genres
+FROM tv_show_genres
+INNER JOIN tv_shows
 ON tv_shows.title = tv_show_genres.genre_id;
