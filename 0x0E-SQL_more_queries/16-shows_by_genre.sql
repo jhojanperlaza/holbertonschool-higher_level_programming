@@ -1,6 +1,8 @@
--- Script that lists genres and number of shows
-SELECT tv_genres.name AS genre, COUNT(tv_show_genres.genre_id) AS number_of_shows -- Query to join tables
-FROM tv_show_genres
-JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
-GROUP BY tv_show_genres.genre_id
-ORDER BY number_of_shows DESC, tv_genres.id ASC;
+-- Script that lists all shows and all genres
+SELECT tv_shows.title, tv_genres.name
+FROM tv_shows
+LEFT JOIN tv_show_genres
+ON tv_show_genres.show_id = tv_shows.id
+LEFT JOIN tv_genres
+ON tv_genres.id = tv_show_genres.genre_id
+ORDER BY tv_shows.title, tv_genres.name;
