@@ -2,7 +2,7 @@
 /*  script that display the status code of a GET reques */
 const axios = require('axios').default;
 
-url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 axios.get(url)
   .then(function (response) {
