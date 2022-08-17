@@ -9,6 +9,7 @@ axios.get(process.argv[2])
       const dict = response.data.results[i].characters;
       dict.forEach((link) => {
         if (link.search('18') !== -1) {
+          /* con search busco que el link tenga el numero 18 */
           cont++;
         }
       });
