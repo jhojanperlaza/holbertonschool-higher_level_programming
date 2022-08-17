@@ -6,7 +6,7 @@ url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 axios.get(url)
   .then(function (response) {
-    /*if I want to make a request of
+    /* if I want to make a request of
     all movies the command would be
     "console.log(response.data);" */
     console.log(response.data.title);
