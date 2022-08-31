@@ -6,7 +6,6 @@ and lists all cities of that state, using the database hbtn_0e_4_usa
 import MySQLdb
 import sys
 
-from tomlkit import string
 
 """ This code not be executed when imported"""
 if __name__ == "__main__":
