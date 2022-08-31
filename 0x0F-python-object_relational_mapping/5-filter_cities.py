@@ -17,6 +17,7 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name FROM cities INNER\
         JOIN states ON states.name = %s AND\
         states.id=cities.state_id;", (sys.argv[4],))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    states = cur.fetchall()
+
+    print(", ".join([state[0] for state in states]))
+    # states is a array of tuples
