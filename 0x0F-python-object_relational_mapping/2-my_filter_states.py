@@ -14,10 +14,9 @@ if __name__ == "__main__":
                              passwd=sys.argv[2],
                              db=sys.argv[3])
     cur = data_b.cursor()
-    string_ex = "SELECT * FROM states WHERE name = '{}' ORDER BY\
+    string_ex = "SELECT * FROM states WHERE name LIKE BINARY '{}%' ORDER BY\
          states.id ASC;".format(sys.argv[4])
     cur.execute(string_ex)
     rows = cur.fetchall()
     for row in rows:
-        if row[1] == sys.argv[4]:
-            print(row)
+        print(row)
