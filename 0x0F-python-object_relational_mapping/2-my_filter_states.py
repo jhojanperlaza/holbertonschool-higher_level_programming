@@ -15,8 +15,9 @@ if __name__ == "__main__":
                              db=sys.argv[3])
     cur = data_b.cursor()
     string_ex = "SELECT * FROM states WHERE name = '{}' ORDER BY\
-         states.id ;".format(sys.argv[4])
+         states.id ASC;".format(sys.argv[4])
     cur.execute(string_ex)
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
