@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" script that takes in an argument and displays all values
+"""
+script that takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa where name matches
 the argument
 """
-from ctypes import string_at
 import MySQLdb
 import sys
 
@@ -14,7 +14,8 @@ if __name__ == "__main__":
                              passwd=sys.argv[2],
                              db=sys.argv[3])
     cur = data_b.cursor()
-    string_ex = "SELECT * FROM states WHERE name = '{}';".format(sys.argv[4])
+    string_ex = "SELECT * FROM states WHERE name = '{}'ORDER BY\
+         states.id ASC;".format(sys.argv[4])
     cur.execute(string_ex)
     rows = cur.fetchall()
     for row in rows:
