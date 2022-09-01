@@ -13,10 +13,10 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-Session = sessionmaker(engine)
-new_instance_session = Session()
+    Session = sessionmaker(engine)
+    new_instance_session = Session()
 
-# query in sqlalchemy:
-for state in new_instance_session.query(State).order_by(State.id).all():
-    print("{}: {}".format(state.id, state.name))
-new_instance_session.close()
+    # query in sqlalchemy:
+    for state in new_instance_session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
+    new_instance_session.close()
