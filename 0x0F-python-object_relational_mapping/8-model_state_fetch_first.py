@@ -18,4 +18,7 @@ if __name__ == "__main__":
     new_instance_session = Session()
 
     element = new_instance_session.query(State).order_by(State.id).first()
-    print("{}: {}".format(element.id, element.name))
+    if element:
+        print("{}: {}".format(element.id, element.name))
+    else:
+        print("Nothing")
