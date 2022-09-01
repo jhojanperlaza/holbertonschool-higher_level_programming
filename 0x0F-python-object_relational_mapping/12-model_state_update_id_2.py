@@ -17,6 +17,6 @@ if __name__ == "__main__":
     new_instance_session = Session()
 
     x = new_instance_session.query(State).get(2)
-    print (x.name)
+    print(x.name)
     x.name = 'New Mexico'
     new_instance_session.commit()
