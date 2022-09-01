@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     new_instance_session = Session()
 
-    for state in new_instance_session.query(State).order_by(State.id).all():
+    for state in new_instance_session.query(State):
         if 'a' in state.name:
             new_instance_session.delete(state)
             new_instance_session.commit()
