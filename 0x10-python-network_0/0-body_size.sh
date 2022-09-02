@@ -4,4 +4,4 @@
 # -i: Include the HTTP response headers in the output
 # -s: Avoid showing progress bar
 
-curl -si $1 | awk '/Content-Length/ {print $2}'
+curl -si "$1" | awk '/Content-Length/ {print $2}'
