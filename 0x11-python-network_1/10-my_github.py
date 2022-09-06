@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     basic = requests.auth.HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    result_response =  requests.get('https://api.github.com/user', auth=basic)
+    result_response = requests.get('https://api.github.com/user', auth=basic)
 
     if result_response.status_code >= 400:
         print("None")
