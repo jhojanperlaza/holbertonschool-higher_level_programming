@@ -8,11 +8,15 @@ from sys import argv
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    letter = "" if len(argv) == 1 else argv[1]
-    payload = {'q': letter}
-    r = post(url, data=payload)
+
+    if len(argv) == 1:
+        value = {'q': ""}
+    else:
+        value = {'q': argv[1]}
+
+    rquest = post(url, data=value)
     try:
-        response = r.json()
+        response = rquest.json()
         if response == {}:
             print("No result")
         else:
