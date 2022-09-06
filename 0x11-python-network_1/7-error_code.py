@@ -9,6 +9,6 @@ import sys
 if __name__ == "__main__":
     try:
         rq = requests.get(sys.argv[1])
-        print(rq.status_code)
+        print(rq.text)
     except:
-        print(rq.status_code)
+        print("Error code: {}".format(rq.status_code))
