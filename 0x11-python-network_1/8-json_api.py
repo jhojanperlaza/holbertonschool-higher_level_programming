@@ -17,9 +17,9 @@ if __name__ == "__main__":
     rquest = post(url, data=value)
     try:
         j_son = rquest.json()
-        if j_son.isempty():
-            print("No result")
-        else:
+        if j_son:
             print("[{}] {}".format(j_son.get("id"), j_son.get("name")))
+        else:
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
