@@ -11,7 +11,7 @@ if __name__ == "__main__":
     q = ""
 
     if len(sys.argv) == 2:
-        q = sys.argv[2]
+        q = sys.argv[1]
 
     value = {'q': q}
     rq = post(url, data=value)
