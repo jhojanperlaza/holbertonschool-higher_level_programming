@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    q=""
+    q = ""
 
     if len(sys.argv) == 2:
         q = sys.argv[2]
@@ -22,5 +22,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(j_son.get("id"), j_son.get("name")))
-    except ValueError:
+    except Exception:
         print("Not a valid JSON")
